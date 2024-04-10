@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+*{
+  font-family: 'Martian Mono', monospace;
+}
+.custombtn {
+  /* Variables */
+  --button_radius: 0.5em;
+  --button_color: #fff;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+.custombtn_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+.custombtn:hover .custombtn_top {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+.custombtn:active .custombtn_top {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+.custombtn.contact:hover .custombtn_top {
+  /* Pull the button upwards when hovered */
+  transform: translateY(0);
+}
+
+.custombtn.contact:active .custombtn_top {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
